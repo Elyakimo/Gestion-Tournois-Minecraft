@@ -18,3 +18,4 @@ catch (PDOException $e) {
     error_log("Erreur de connexion à la base de données PostgreSQL : " . $e->getMessage());
     echo "Erreur : " . $e->getMessage();
 }
+?>
