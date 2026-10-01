@@ -22,6 +22,7 @@ CREATE TABLE joueur (
   email           VARCHAR(255) UNIQUE,
   date_naissance  DATE,
   id_equipe       UUID,
+  password_hash   VARCHAR(255) NOT NULL,
   CONSTRAINT fk_joueur_equipe FOREIGN KEY (id_equipe)
     REFERENCES equipe(id_equipe) ON DELETE SET NULL
 );

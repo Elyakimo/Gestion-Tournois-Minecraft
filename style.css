@@ -1,0 +1,26 @@
+@import url('https://fonts.google.com/share?selection.family=Pixelify+Sans:wght@400..700');
+
+:root {
+    --title: grey;
+    --text: white;
+    --header-bg: rgba(110, 110, 110, 0.418);
+    --font: 'Pixelify Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text)
+}
+body {
+    font-size: 16px;
+    font-family: var(--font);
+}
+
+nav a {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
