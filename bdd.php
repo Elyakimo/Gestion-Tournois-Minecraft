@@ -16,11 +16,11 @@ function detectDbHost(): string
     return 'localhost';
 }
 
-$DB_HOST = getenv('DB_HOST') ?: detectDbHost();
+$DB_HOST = getenv('DB_HOST') ?: 'localhost';
 $DB_PORT = getenv('DB_PORT') ?: '5432';
-$DB_NAME = getenv('DB_NAME') ?: 'gestion_tournois_mc';
+$DB_NAME = getenv('DB_NAME') ?: 'gestion_tournoi_mc';
 $DB_USER = getenv('DB_USER') ?: 'postgres';
-$DB_PASS = getenv('DB_PASS') ?: 'ME_CHANGER'; # MET TON MDP À TOI :)
+$DB_PASS = getenv('DB_PASS') ?: 'codegode'; # MET TON MDP À TOI :)
 
 try {
     $pdo = new PDO(
@@ -34,5 +34,5 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    die('Erreur de connexion à la base de données : ');
+    die('Erreur de connexion à la base de données : ' . $e->getMessage());
 }
